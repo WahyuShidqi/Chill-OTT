@@ -1,0 +1,119 @@
+/* *GENERAL STYLING */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+a:hover {
+  color: rgba(3, 103, 219, 1) !important;
+}
+
+.text-sm {
+  font-size: 10px !important;
+}
+
+body {
+  /* background-color: #181a1c; */
+  color: #e7e3fc;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  font-style: normal;
+}
+
+/* *NAVBAR STYLING */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  max-height: 94px;
+  background-color: #181a1c;
+}
+.menu-container {
+  display: flex;
+  gap: 5rem;
+}
+.menu-container a {
+  color: #e7e3fc;
+  text-decoration: none;
+}
+
+.logo {
+  max-width: 6.4rem;
+  max-height: 44px;
+}
+
+.user-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dropdown-btn {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.dropdown-btn img {
+  max-width: 14px;
+}
+
+.profile-container {
+  /* relative for the dropdown menu :D */
+  position: relative;
+}
+
+.dropdown-icon {
+  width: 24px;
+  height: 24px;
+}
+.dropdown-menu {
+  list-style-type: none;
+  position: absolute;
+  background-color: rgba(24, 26, 28, 0.8);
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: start;
+  padding: 1.5rem 2rem;
+  width: max-content;
+  right: 0;
+}
+
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.dropdown-menu li:nth-child(1) {
+  color: rgba(50, 84, 255, 1);
+}
+
+/* Hero section styling */
+
+/* * misc styling */
+
+/* Controlled by our lord and savior JS-Kun */
+.show {
+  display: flex;
+}

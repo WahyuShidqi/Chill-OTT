@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts Lato-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Stylesheet for Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <title>Chill</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- logo dan links -->
+        <div class="menu-container">
+          <a href="index.html">
+            <img class="logo" src="assets/Logo.png" alt="chill-logo" />
+          </a>
+
+          <a href="">Series</a>
+          <a href="">Film</a>
+          <a href="">Daftar Saya</a>
+        </div>
+
+        <!-- Profile pics -->
+        <div class="profile-container">
+          <div class="user-image-wrapper">
+            <a href="">
+              <img
+                class="user-icon"
+                src="assets/thumbs/user-pp.png"
+                alt="user-image"
+              />
+            </a>
+
+            <button class="dropdown-btn dd" onclick="dropDownToggle()">
+              <img class="dd" src="assets/Vector.png" alt="arrow.png" />
+            </button>
+          </div>
+
+          <!-- !This thing only shown when user hover over user-image -->
+          <!-- !ALSO THAT 'dd' CLASS IS FOR GROUPING THE ELEMENTS NEEDED TO BE EXCLUDED FROM window.onclick event :D -->
+          <!-- dropdown menu -->
+          <ul id="nav-dropdown" class="dropdown-menu dd">
+            <li class="dd">
+              <img
+                class="dropdown-icon dd"
+                src="assets/profile.png"
+                alt="profile.png"
+              /><a href="https://stackoverflow.com">Profil Saya</a>
+            </li>
+            <li class="dd">
+              <img
+                class="dropdown-icon dd"
+                src="assets/stars.png"
+                alt="stars.png"
+              /><a href="https://pixelsconverter.com">Ubah Premium</a>
+            </li>
+            <li class="dd">
+              <img
+                class="dropdown-icon dd"
+                src="assets/logout.png"
+                alt="logout.png"
+              /><a href="https://www.w3schools.com">Keluar</a>
+            </li>
+          </ul>
+
+          <!-- end of dropdown menu list -->
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/movieImages/hero-images.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/movieImages/hero-images.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/movieImages/hero-images.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- *Scripts below are mine -->
+    <script>
+      const heroSwiper = new Swiper(".hero-swiper", {});
+    </script>
+  </body>
+</html>
