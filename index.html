@@ -23,16 +23,16 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="content-padding-lr">
         <!-- logo dan links -->
         <div class="menu-container">
           <a href="index.html">
             <img class="logo" src="assets/Logo.png" alt="chill-logo" />
           </a>
 
-          <a href="">Series</a>
-          <a href="">Film</a>
-          <a href="">Daftar Saya</a>
+          <a class="text-md font-semibold" href="">Series</a>
+          <a class="text-md font-semibold" href="">Film</a>
+          <a class="text-md font-semibold" href="">Daftar Saya</a>
         </div>
 
         <!-- Profile pics -->
@@ -74,7 +74,9 @@
                 class="dropdown-icon dd"
                 src="assets/logout.png"
                 alt="logout.png"
-              /><a href="https://www.w3schools.com">Keluar</a>
+              /><a class="user-login-menu" href="https://www.w3schools.com"
+                >Keluar</a
+              >
             </li>
           </ul>
 
@@ -84,35 +86,242 @@
     </header>
 
     <main>
+      <!-- Hero section -->
       <section class="hero-section">
         <div class="swiper hero-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                class="hero-images"
-                src="assets/movieImages/hero-images.png"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/movieImages/hero-images.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/movieImages/hero-images.png" alt="" />
-            </div>
+          <div class="swiper-wrapper hero-swiper-wrapper">
+            <!-- slides lists! -->
+            <!-- !Slides are being added dynamically with imageMapper.js to avoid repetition and cluttering html file :D -->
+
+            <!-- End of all slides :D -->
           </div>
+        </div>
+      </section>
+
+      <!-- Lanjut nonton section -->
+      <section
+        class="continue-watch-section section-padding content-padding-lr"
+      >
+        <h2 class="text-xl section-title">Melanjutkan Tonton Film</h2>
+        <div class="swiper continue-watch-swiper">
+          <div class="swiper-wrapper continue-watch-swiper-wrapper">
+            <!-- slides lists! -->
+
+            <!-- !Handled by JS. Don't want to repeat ton of html tags and then get confused later XD -->
+
+            <!-- End of all slides :D -->
+          </div>
+
+          <!-- navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <!-- Top Rating section -->
+      <section class="top-rating-section section-padding content-padding-lr">
+        <h2 class="text-xl section-title">
+          Top Rating Film dan Series Hari ini
+        </h2>
+        <div class="swiper top-rating-swiper ver-swiper">
+          <div class="swiper-wrapper top-rating-swiper-wrapper">
+            <!-- slides lists! -->
+
+            <!-- !Handled by JS. Don't want to repeat ton of html tags and then get confused later XD -->
+
+            <!-- End of all slides :D -->
+          </div>
+
+          <!-- navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <!-- Trending section -->
+      <section class="trending-section section-padding content-padding-lr">
+        <h2 class="text-xl section-title">Film Trending</h2>
+        <div class="swiper trending-swiper ver-swiper">
+          <div class="swiper-wrapper trending-swiper-wrapper">
+            <!-- slides lists! -->
+
+            <!-- !Handled by JS. Don't want to repeat ton of html tags and then get confused later XD -->
+
+            <!-- End of all slides :D -->
+          </div>
+
+          <!-- navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <!-- Rilisbaru section -->
+      <section class="rilisbaru-section section-padding content-padding-lr">
+        <h2 class="text-xl section-title">Rilis Baru</h2>
+        <div class="swiper rilisbaru-swiper ver-swiper">
+          <div class="swiper-wrapper rilisbaru-swiper-wrapper">
+            <!-- slides lists! -->
+
+            <!-- !Handled by JS. Don't want to repeat ton of html tags and then get confused later XD -->
+
+            <!-- End of all slides :D -->
+          </div>
+
+          <!-- navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="content-padding-lr">
+      <div class="footer-container content-padding-ud">
+        <!-- icon -->
+        <div class="footer-icon-wrapper">
+          <img src="assets/Logo.png" alt="logo.png" />
+          <p class="copyright text-xsm"></p>
+        </div>
+
+        <div class="footer-menu-container">
+          <!-- genre -->
+          <div class="footer-genre-wrapper">
+            <h4 class="text-sm font-bold">Genre</h4>
+            <div class="footer-genre-lists-cont">
+              <ul class="text-sm font-semibold">
+                <li>Aksi</li>
+                <li>Anak-anak</li>
+                <li>Anime</li>
+                <li>Britania</li>
+              </ul>
+              <ul class="text-sm font-semibold">
+                <li>Drama</li>
+                <li>Fantasi</li>
+                <li>Kejahatan</li>
+                <li>KDrama</li>
+              </ul>
+              <ul class="text-sm font-semibold">
+                <li>Komedi</li>
+                <li>Petualangan</li>
+                <li>Perang</li>
+                <li>Romantis</li>
+              </ul>
+            </div>
+          </div>
+          <!-- help -->
+          <div class="footer-help-wrapper">
+            <h4 class="text-sm font-bold">Bantuan</h4>
+            <div class="footer-help-lists-cont">
+              <ul class="text-sm font-semibold">
+                <li>FAQ</li>
+                <li>Kontak kami</li>
+                <li>Privasi</li>
+                <li>Syarat & Ketentuan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="scripts/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
+    <script src="scripts/imageMapper.js"></script>
     <!-- *Scripts below are mine -->
     <script>
-      const heroSwiper = new Swiper(".hero-swiper", {});
+      document.querySelector(
+        ".copyright"
+      ).innerHTML = `Copyright &copy;${new Date().getFullYear()} Chill All Rights Reserved`;
+
+      const heroSwiper = new Swiper(".hero-swiper", {
+        loop: true,
+        parallax: true,
+        speed: 2000,
+        autoplay: {
+          delay: 5000,
+        },
+      });
+
+      const continueWatchSwiper = new Swiper(".continue-watch-swiper", {
+        loop: true,
+        slidesPerView: 4,
+        centeredSlides: false,
+        spaceBetween: 24,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      const topRatingSwiper = new Swiper(".top-rating-swiper", {
+        loop: true,
+        slidesPerView: 3,
+        centeredSlides: false,
+        spaceBetween: 16,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          900: {
+            slidesPerView: 4,
+            spaceBetween: 25,
+          },
+          1150: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        },
+      });
+
+      const trendingSwiper = new Swiper(".trending-swiper", {
+        loop: true,
+        slidesPerView: 3,
+        centeredSlides: false,
+        spaceBetween: 16,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          900: {
+            slidesPerView: 4,
+            spaceBetween: 25,
+          },
+          1150: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        },
+      });
+
+      const rilisBaruSwiper = new Swiper(".rilisbaru-swiper", {
+        loop: true,
+        slidesPerView: 3,
+        centeredSlides: false,
+        spaceBetween: 16,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          900: {
+            slidesPerView: 4,
+            spaceBetween: 25,
+          },
+          1150: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        },
+      });
     </script>
   </body>
 </html>
