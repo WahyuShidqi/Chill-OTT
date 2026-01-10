@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/login.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="login-section">
+        <form action="">
+          <div class="form-container">
+            <div class="welcome-wrapper">
+              <img src="assets/Logo.png" alt="Chill.png" />
+              <p class="heading">Daftar</p>
+              <p>Selamat datang!</p>
+            </div>
+            <div class="username-wrapper">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Masukkan username"
+                required
+              />
+            </div>
+            <div class="password-wrapper">
+              <label for="password">Kata Sandi</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Masukkan kata sandi"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle toggle-btn-fix"
+                onclick="togglePassword()"
+              >
+                <img src="assets/eye-off.png" alt="eye-off.png" />
+              </button>
+              <!-- <div class="user-option-wrapper">
+                <p>Belum punya akun? <a class="font-bold" href="">Daftar</a></p>
+                <a href="">Lupa kata sandi?</a>
+              </div> -->
+            </div>
+            <div class="password-wrapper password-confirmation-wrapper">
+              <label for="password-confirm">Konfirmasi Kata Sandi</label>
+              <input
+                type="password"
+                id="password-confirm"
+                placeholder="Masukkan kata sandi"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                onclick="toggleConfirmPassword()"
+              >
+                <img src="assets/eye-off.png" alt="eye-off.png" />
+              </button>
+              <div class="user-option-wrapper">
+                <p>
+                  Sudah punya akun?
+                  <a class="font-bold" href="login.html">Masuk</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="submit-form-wrapper">
+              <button class="login-btn" type="submit">Daftar</button>
+              <p>Atau</p>
+              <button class="login-google-btn">
+                <img src="assets/google-icon.png" alt="google-icon.png" />
+                Daftar dengan Google
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- <footer></footer> -->
+
+    <script>
+      const form = document.querySelector("form");
+      const passwordInput = document.querySelector("#password");
+      const passwordConfirmInput = document.querySelector("#password-confirm");
+      // toggle password visibility
+      function togglePassword() {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+        } else {
+          passwordInput.type = "password";
+        }
+      }
+
+      function toggleConfirmPassword() {
+        if (passwordConfirmInput.type === "password") {
+          passwordConfirmInput.type = "text";
+        } else {
+          passwordConfirmInput.type = "password";
+        }
+      }
+
+      //   Check if the confirmation password is the same as the initial password
+      form.addEventListener("submit", (e) => {
+        if (passwordInput.value !== passwordConfirmInput.value) {
+          e.preventDefault;
+          alert("Password must match");
+        }
+      });
+    </script>
+  </body>
+</html>

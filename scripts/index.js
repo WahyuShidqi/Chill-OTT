@@ -20,11 +20,11 @@ window.onclick = function (event) {
 };
 
 // dropdowm menu user's login status
-const isLoggedIn = false;
-let userLoginMenu = document.querySelector(".user-login-menu");
+// const isLoggedIn = false;
+// let userLoginMenu = document.querySelector(".user-login-menu");
 
-if (!isLoggedIn) {
-  userLoginMenu.innerText = "Login";
-} else {
-  userLoginMenu.innerText = "Keluar";
-}
+// if (!isLoggedIn) {
+//   userLoginMenu.innerText = "Login";
+// } else {
+//   userLoginMenu.innerText = "Keluar";
+// }

@@ -97,6 +97,7 @@ function slideUpdater(container, slidesDB) {
   }
 
   //  Data mapping starts
+
   swiperContainer.innerHTML = slidesDB
     .map((slide) => {
       if (swiperContainer.classList.contains("hero-swiper-wrapper")) {
@@ -111,7 +112,7 @@ function slideUpdater(container, slidesDB) {
               <div class="swiper-lazy-preloader"></div>
               <div class="layout content-padding-lr">
                 <h1 class="font-bold text-xxl" data-swiper-parallax="-300">${slide.title}</h1>
-                <p class="hero-title-desc" data-swiper-parallax="-300">
+                <p class="hero-title-desc text-cut" data-swiper-parallax="-300">
                     ${slide.description}
                 </p>
                 <div class="hero-buttons" data-swiper-parallax="-300">
@@ -140,7 +141,7 @@ function slideUpdater(container, slidesDB) {
                 </div>
               </div>
             </div>
-            
+        
     `;
       } else if (
         swiperContainer.classList.contains("continue-watch-swiper-wrapper")
@@ -183,7 +184,7 @@ function slideUpdater(container, slidesDB) {
                   lazyload="true"
                 />
                 <div class="swiper-lazy-preloader"></div>
-              <div class="hor-card-text-layout">
+              <div class="ver-card-text-layout">
 
                 <div class="movie-rating">
                   <img
@@ -214,3 +215,20 @@ slideUpdater(".trending-swiper-wrapper", topRatedMovie);
 slideUpdater(".rilisbaru-swiper-wrapper", topRatedMovie);
 
 console.log("top rated:", topRatedMovie);
+
+// let description = document.querySelector(".hero-title-desc").innerText;
+
+// function descShortener(str) {
+//   console.log("ehehehehehe", str.length);
+//   let splittedStr = str.split("");
+//   console.log("splitted", splittedStr);
+//   console.log("splitted", splittedStr);
+
+//   if (splittedStr.length > 6) {
+//     splittedStr.splice(5);
+//   }
+
+//   console.log("sliced", splittedStr);
+// }
+
+// descShortener(description);

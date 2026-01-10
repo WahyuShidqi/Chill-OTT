@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/login.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="login-section">
+        <form action="">
+          <div class="form-container">
+            <div class="welcome-wrapper">
+              <img src="assets/Logo.png" alt="Chill.png" />
+              <p class="heading">Masuk</p>
+              <p>Selamat datang kembali!</p>
+            </div>
+            <div class="username-wrapper">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Masukkan username"
+                required
+              />
+            </div>
+            <div class="password-wrapper">
+              <label for="password">Kata Sandi</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Masukkan kata sandi"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                onclick="togglePassword()"
+              >
+                <img src="assets/eye-off.png" alt="eye-off.png" />
+              </button>
+              <div class="user-option-wrapper">
+                <p>
+                  Belum punya akun?
+                  <a class="font-bold" href="register.html">Daftar</a>
+                </p>
+                <a href="">Lupa kata sandi?</a>
+              </div>
+            </div>
+            <div class="submit-form-wrapper">
+              <button class="login-btn" type="submit">Masuk</button>
+              <p>Atau</p>
+              <button class="login-google-btn">
+                <img src="assets/google-icon.png" alt="google-icon.png" />
+                Masuk dengan Google
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- <footer></footer> -->
+
+    <script>
+      // toggle password visibility
+      function togglePassword() {
+        let passwordInput = document.querySelector("#password");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+        } else {
+          passwordInput.type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>

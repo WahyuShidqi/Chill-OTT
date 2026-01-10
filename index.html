@@ -13,6 +13,7 @@
 
     <!-- Stylesheet link -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsiveStyle.css" />
     <!-- Stylesheet for Swiper -->
     <link rel="stylesheet" href="swiper.css" />
     <link
@@ -27,12 +28,21 @@
         <!-- logo dan links -->
         <div class="menu-container">
           <a href="index.html">
-            <img class="logo" src="assets/Logo.png" alt="chill-logo" />
+            <img
+              class="logo hidden-on-mobile"
+              src="assets/Logo.png"
+              alt="chill-logo"
+            />
+            <img
+              class="smol-logo hidden-on-desktop"
+              src="assets/Smol-logo.png"
+              alt="chill-logo"
+            />
           </a>
 
           <a class="text-md font-semibold" href="">Series</a>
           <a class="text-md font-semibold" href="">Film</a>
-          <a class="text-md font-semibold" href="">Daftar Saya</a>
+          <a class="text-md font-semibold" href="register.html">Daftar Saya</a>
         </div>
 
         <!-- Profile pics -->
@@ -189,22 +199,22 @@
             <h4 class="text-sm font-bold">Genre</h4>
             <div class="footer-genre-lists-cont">
               <ul class="text-sm font-semibold">
-                <li>Aksi</li>
-                <li>Anak-anak</li>
-                <li>Anime</li>
-                <li>Britania</li>
+                <li><a href="">Aksi</a></li>
+                <li><a href="">Anak-anak</a></li>
+                <li><a href="">Anime</a></li>
+                <li><a href="">Britania</a></li>
               </ul>
               <ul class="text-sm font-semibold">
-                <li>Drama</li>
-                <li>Fantasi</li>
-                <li>Kejahatan</li>
-                <li>KDrama</li>
+                <li><a href="">Drama</a></li>
+                <li><a href="">Fantasi</a></li>
+                <li><a href="">Kejahatan</a></li>
+                <li><a href="">KDrama</a></li>
               </ul>
               <ul class="text-sm font-semibold">
-                <li>Komedi</li>
-                <li>Petualangan</li>
-                <li>Perang</li>
-                <li>Romantis</li>
+                <li><a href="">Komedi</a></li>
+                <li><a href="">Petualangan</a></li>
+                <li><a href="">Perang</a></li>
+                <li><a href="">Romantis</a></li>
               </ul>
             </div>
           </div>
@@ -213,10 +223,10 @@
             <h4 class="text-sm font-bold">Bantuan</h4>
             <div class="footer-help-lists-cont">
               <ul class="text-sm font-semibold">
-                <li>FAQ</li>
-                <li>Kontak kami</li>
-                <li>Privasi</li>
-                <li>Syarat & Ketentuan</li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Kontak kami</a></li>
+                <li><a href="">Privasi</a></li>
+                <li><a href="">Syarat & Ketentuan</a></li>
               </ul>
             </div>
           </div>
@@ -243,22 +253,37 @@
       });
 
       const continueWatchSwiper = new Swiper(".continue-watch-swiper", {
-        loop: true,
-        slidesPerView: 4,
+        loop: false,
+        slidesPerView: 1,
         centeredSlides: false,
-        spaceBetween: 24,
+        spaceBetween: 16,
 
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+
+        breakpoints: {
+          600: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1150: {
+            slidesPerView: 5,
+            spaceBetween: 24,
+          },
+          // 1150: {
+          //   slidesPerView: 5,
+          //   spaceBetween: 50,
+          // },
+        },
       });
 
       const topRatingSwiper = new Swiper(".top-rating-swiper", {
-        loop: true,
+        loop: false,
         slidesPerView: 3,
         centeredSlides: false,
-        spaceBetween: 16,
+        spaceBetween: 10,
 
         navigation: {
           nextEl: ".swiper-button-next",
@@ -278,10 +303,10 @@
       });
 
       const trendingSwiper = new Swiper(".trending-swiper", {
-        loop: true,
+        loop: false,
         slidesPerView: 3,
         centeredSlides: false,
-        spaceBetween: 16,
+        spaceBetween: 10,
 
         navigation: {
           nextEl: ".swiper-button-next",
@@ -301,10 +326,10 @@
       });
 
       const rilisBaruSwiper = new Swiper(".rilisbaru-swiper", {
-        loop: true,
+        loop: false,
         slidesPerView: 3,
         centeredSlides: false,
-        spaceBetween: 16,
+        spaceBetween: 10,
 
         navigation: {
           nextEl: ".swiper-button-next",
